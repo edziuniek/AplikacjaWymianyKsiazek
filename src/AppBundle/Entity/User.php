@@ -17,6 +17,13 @@ class User extends BaseUser
      */
     protected $id;
 
+
+    /**
+     * @ORM\Column(type="integer", options={"default": 0})
+     */
+    private $points = 0;
+
+
     public function __construct()
     {
         parent::__construct();
