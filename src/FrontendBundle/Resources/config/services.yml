@@ -1,0 +1,13 @@
+services:
+    # controllers are imported separately to make sure they're public
+    # and have a tag that allows actions to type-hint services
+    FrontendBundle\Controller\:
+        resource: '../../Controller'
+        public: true
+        tags: ['controller.service_arguments']
+
+    kernel.listener.logged_in_user_listener:
+        class: FrontendBundle\Listener\LoggedInListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+        autowire: true
