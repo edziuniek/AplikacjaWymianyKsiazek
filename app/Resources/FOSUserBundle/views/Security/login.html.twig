@@ -11,22 +11,22 @@
         {% endif %}
 
         <div class="form-group">
-            <label for="username" class="form-control-label">{{ 'security.login.username'|trans }}</label>
+            <label for="username" class="form-control-label">{{ 'Login'|trans }}</label>
             <input type="text" id="username" name="_username" class="form-control" value="{{ last_username }}" required="required" />
         </div>
 
         <div class="form-group">
-            <label for="password" class="form-control-label">{{ 'security.login.password'|trans }}</label>
+            <label for="password" class="form-control-label">{{ 'Password'|trans }}</label>
             <input type="password" id="password" name="_password" class="form-control" required="required" />
         </div>
 
         <div class="form-check">
             <label for="remember_me" class="form-check-label">
                 <input type="checkbox" id="remember_me" name="_remember_me" class="form-check-input">
-                {{ 'security.login.remember_me'|trans }}
+                {{ 'Remember me'|trans }}
             </label>
         </div>
 
-        <button type="submit" id="_submit" name="_submit" class="btn btn-primary">{{ 'security.login.submit'|trans }}</button>
+        <button type="submit" id="_submit" name="_submit" class="btn btn-primary">{{ 'Submit'|trans }}</button>
     </form>
 {% endblock %}

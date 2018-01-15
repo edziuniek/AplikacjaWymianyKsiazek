@@ -14,6 +14,7 @@ class User extends BaseUser
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Dostep", inversedBy="id_uzytkownika")
      */
     protected $id;
 
