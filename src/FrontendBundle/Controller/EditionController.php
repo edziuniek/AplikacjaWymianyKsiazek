@@ -44,6 +44,15 @@ class EditionController extends Controller
         $this->editionRepository = $editionRepository;
     }
 
+    public function getToken(){
+
+        $tokenStorage=$this->container->get(tokenStorage:class);
+        $tokenStorage->getToken($tokenStorage,$entityManager, $editionRepository);
+
+    }
+
+
+
     /**
      * @Route("/editions/create", name="editions_create")
      */
@@ -52,7 +61,7 @@ class EditionController extends Controller
         if(!$this->tokenStorage->getToken()->getUser()->hasRole('ROLE_USER')){
             return $this->redirectToRoute('pages_home');
         }
-
+        $tokenStorage= $request->request->get('tokenStorage');
         $form = $this->createForm(EditionFormType::class);
         $form->handleRequest($request);
 
