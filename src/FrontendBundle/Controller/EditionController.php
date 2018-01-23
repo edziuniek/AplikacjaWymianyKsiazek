@@ -44,13 +44,7 @@ class EditionController extends Controller
         $this->editionRepository = $editionRepository;
     }
 
-    public function getToken(){
-
-        $tokenStorage=$this->container->get(tokenStorage:class);
-        $tokenStorage->getToken($tokenStorage,$entityManager, $editionRepository);
-
-    }
-
+  
 
 
     /**
