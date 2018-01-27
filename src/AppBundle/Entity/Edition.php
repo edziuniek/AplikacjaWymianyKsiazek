@@ -50,14 +50,7 @@ class Edition
      * @param string $fileUrl
      * @param User $author
      */
-    private function __construct(string $title, string $description, int $points, string $fileUrl, User $author)
-    {
-        $this->title = $title;
-        $this->description = $description;
-        $this->points = $points;
-        $this->fileUrl = $fileUrl;
-        $this->author = $author;
-    }
+
 
     /**
      * @param string $title

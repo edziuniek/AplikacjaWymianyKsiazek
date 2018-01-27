@@ -34,17 +34,9 @@ class EditionController extends Controller
      * @param EntityManagerInterface $entityManager
      * @param EditionRepository $editionRepository
      */
-    public function __construct(
-        TokenStorageInterface $tokenStorage,
-        EntityManagerInterface $entityManager,
-        EditionRepository $editionRepository
-    ){
-        $this->tokenStorage = $tokenStorage;
-        $this->entityManager = $entityManager;
-        $this->editionRepository = $editionRepository;
-    }
 
-  
+
+
 
 
     /**
